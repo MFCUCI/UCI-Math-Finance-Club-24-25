@@ -1,0 +1,105 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('Binary_Background.png');
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px;
+    background-color: #f4f4f4;
+    color: #333;
+    position: relative;
+}
+
+.logo {
+    display: flex;
+    height: 100px;
+    width: 100px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    background-color: #00004f;
+    border-radius: 50%;
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.home-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    margin-top: 0px;
+    text-align: center;
+}
+
+h1 {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0;
+    font-size: 34px;
+    color: #333;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.section-title {
+    margin-top: 40px;
+    text-align: center;
+    color: #f4f4f4;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.team-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0 10px;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    width: 200px;
+}
+
+.card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .card {
+        width: 150px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+}

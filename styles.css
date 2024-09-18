@@ -1,0 +1,687 @@
+@font-face {
+    font-family: 'Jua-Regular';
+    /* src: url('fonts/Jua/Jua-Regular.ttf') format('truetype'); */
+    src: url('../fonts/Jua/Jua-Regular.ttf')format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Londrina_Shadow';
+    src: url('fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Playwrite_BE_VLG';
+    src: url('fonts/Playwrite_BE_VLG/PlaywriteBEVLG-VariableFont_wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Rubik_Doodle_Triangles';
+    src: url('fonts/Rubik_Doodle_Triangles/RubikDoodleTriangles-Regular?v=1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Global Styles */
+body, html {
+    background: none;
+    /* font-family: 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, sans-serif; */
+    font-family:'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Colors */
+:root {
+    --navy-blue: #001f3f;
+    --white: #ffffff;
+    --light-gray: #f4f4f4;
+    --dark-gray: #333333;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 7px 20px;
+    color: var(--white);
+    font-family: 'Jua-Regular', sans-serif;
+    letter-spacing: 3p  x;
+    background-color: transparent; /* Initially transparent */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+    min-height: var(--nav-height);
+    transition: background-color 0.5s ease; /* Smooth transition */
+    
+}
+
+/* Hover Effect: Change background on hover */
+.navbar:hover {
+    background-color: var(--navy-blue); /* Color appears on hover */
+    z-index:11;
+}
+
+/* Optional: Change link colors or any additional styles for hover */
+.navbar a:hover {
+    color: var(--light-blue); /* Example link hover effect */
+    z-index:11;
+}
+
+
+.navbar-logo img {
+    width: 70px;
+    height: 70px;
+}
+
+.navbar-logo span {
+    margin-left: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+.navbar-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background: var(--white);
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links li {
+    margin-right: 40px;
+}
+
+.navbar-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+}
+
+/* Add a smooth underline effect using a pseudo-element */
+.navbar-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--white); /* White underline */
+    transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+    color: #f4f4f4; /* Slightly lighter white on hover */
+}
+
+/* Extend the underline on hover */
+.navbar-links a:hover::after {
+    width: 100%; /* Full width underline */
+}
+
+
+/* Sections */
+.section {
+    min-height: 40vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Home, Workshop, and Events sections */
+#home, #events, #past-events {
+    min-height: 100vh; /* Ensure these sections are at least 100vh */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.home {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensure the section has enough height */
+    background: linear-gradient(to right, #000000, #3533CD);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers content vertically */
+    align-items: center;
+}
+
+/* Pseudo-element for background image */
+.home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Binary_Background.png') repeat;
+    background-size: cover;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Gradient overlay */
+.home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.logo-image {
+    z-index: 1;
+    pointer-events: none;
+}
+
+#logo-image {
+    width: 600px;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 250px; /* Add some space between the logo and the top of the section */
+}
+
+/* Phrase container (Math Finance and UCI text) */
+.phrase-container {
+    z-index: 1;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 50px; /* Ensure space between the text and the logo */
+}
+
+.math-finance, .uci {
+     position: absolute;
+    left: 50%; /* Center the text horizontally */
+    transform: translateX(-50%); /* Ensure the text is centered */
+    color: white;
+    white-space: nowrap;
+    font-family: 'Londrina_Shadow', sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+    z-index: 2; /* Ensure the text is above the image */
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.math-finance {
+    top: 20px; /* Adjust the position relative to the container */
+    font-size: 90px;
+}
+
+.uci {
+    top: 120px; /* Adjust the position relative to the container */
+    font-size: 80px;
+}
+
+.about {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+
+.about-description {
+    font-weight: none;
+    font-size: 18px;
+}
+
+/* Upcoming Events Section */
+.events {
+    position: relative;
+    color: var(--white);
+    background: linear-gradient(to right, #000000, #3533CD);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Pseudo-element for background image with reduced transparency */
+.events::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Binary_Background.png') repeat;
+    background-size: cover; /* Ensure the image covers the entire area */
+    opacity: 0.5; /* Adjust opacity to make the image more visible */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Gradient overlay to blend edges (optional) */
+.events::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+
+/* Past Events Section */
+.past-events {
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+}
+
+.past-events h2 {
+    text-align: center;
+    font-family: 'Jua-Regular', sans-serif;
+    font-size: 36px;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
+}
+
+.past-events-grid {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 30px;
+    justify-content: center;
+}
+
+.past-event-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.past-event-card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+
+.past-event-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.past-event-card:hover .past-event-image {
+    transform: scale(1.05); /* Zoom in the image slightly on hover */
+}
+
+/* Event Title */
+.past-event-title {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 20px);
+    text-align: center;
+    color: var(--white);
+    background-color: rgba(0,0,0,0.7);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+/* Event Description on Hover */
+.past-event-description {
+    position: absolute;
+    top:0;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+    color: white;
+    padding: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.past-event-card:hover .past-event-description {
+    opacity: 1;
+}
+
+
+.team {
+    position: relative;
+    color: var(--white);
+    background: linear-gradient(to right, #000000, #3533CD);
+    overflow: hidden;
+    z-index: 1;
+}
+
+/* Pseudo-element for background image with reduced transparency */
+.team::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Binary_Background.png') repeat;
+    background-size: cover; /* Ensure the image covers the entire area */
+    opacity: 0.5; /* Adjust opacity to make the image more visible */
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Gradient overlay to blend edges (optional) */
+.team::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.3) 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.section.team {
+    text-align: center;
+}
+
+.team-pictures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.team-member {
+    margin: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.team-name {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.team-role {
+    font-style: italic;
+    color: var(--white);
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 35px;
+    font-family:'Segoe UI', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: white;
+    background-color: #333333;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #585858;
+}
+
+.contact {
+    background-color: var(--light-gray);
+    color: var(--dark-gray);
+}
+
+
+
+h2 {
+    font-family:'Jua-Regular', sans-serif;
+    font-size: 36px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+    z-index: 2;
+}
+
+p {
+    font-size: 18px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Upcoming events Heading */
+.events-heading {
+    position: relative; /* Ensures z-index takes effect */
+    text-align: center; /* Center align the heading */
+    z-index: 2; /* Higher z-index to appear above the background */
+    margin-bottom: 20px; /* Adds some space below the heading */
+}
+
+
+/* Carousel */
+.carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-items {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    flex: 1 0 100%;
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    border-radius: 15px;
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    text-align: center;
+    color: var(--navy-blue);
+    background-color: var(--white);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.carousel-controls button {
+    background-color: var(--navy-blue);
+    color: var(--white);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.carousel-controls button:hover {
+    background-color: #003366;
+}
+
+/* Team Members */
+.team-pictures {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.team-picture {
+    text-align: center;
+    z-index: 2;
+}
+
+.team-picture img {
+    width: 1000px;
+    height: 350px;
+    border-radius: 2%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+h3 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+
+
+/* Contact Links */
+.contact {
+  text-align: center;
+  padding: 2rem;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.social-icon {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.social-icon img {
+  width: 50px; /* Adjust size as needed */
+  height: 50px; /* Maintain aspect ratio */
+  margin-bottom: 0.5rem; /* Space between icon and description */
+  border-radius: 25%;
+}
+
+.social-icon p {
+  margin: 0;
+  font-size: 0.9rem; /* Adjust font size as needed */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-toggle {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        align-items: flex-start;
+        margin-top: 10px;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links li {
+        margin: 10px 0;
+    }
+
+    .workshop-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .workshop-item img,
+    .workshop-info {
+        width: 100%;
+    }
+
+    .team-members {
+        flex-direction: column;
+    }
+
+    .navbar-social {
+        margin-top: 10px;
+    }
+}
