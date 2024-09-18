@@ -636,7 +636,7 @@ h3 {
 }
 
 .social-icon p {
-  margin: 0;
+  margin: 0;    
   font-size: 0.9rem; /* Adjust font size as needed */
 }
 
@@ -648,6 +648,8 @@ h3 {
         align-items: center; /* Align both elements vertically in the center */
         padding: 10px;
         display: flex;
+        box-sizing: border-box; /* Ensure padding is included in width */
+        overflow: hidden; /* Prevent overflow */
     }
 
     .navbar-logo img {
@@ -660,6 +662,7 @@ h3 {
         align-items: center;
         margin-left: auto; /* Push toggle to the right */
         cursor: pointer;
+        box-sizing: border-box; /* Ensure padding is included in width */
     }
 
     .navbar-links {
