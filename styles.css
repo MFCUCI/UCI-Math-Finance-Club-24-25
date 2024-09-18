@@ -643,9 +643,11 @@ h3 {
 /* Responsive Design */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: row; /* Ensure the logo and toggle are in the same row */
+        justify-content: space-between; /* Distribute space between logo and toggle */
+        align-items: center; /* Align both elements vertically in the center */
         padding: 10px;
+        display: flex;
     }
 
     .navbar-logo img {
@@ -653,19 +655,24 @@ h3 {
         height: 50px;
     }
 
+    .navbar-toggle {
+        display: flex;
+        align-items: center;
+        margin-left: auto; /* Push toggle to the right */
+        cursor: pointer;
+    }
+
     .navbar-links {
         display: none;
         flex-direction: column;
         width: 100%;
+        top: 100%;
+        right: 0;
         align-items: flex-start;
         margin-top: 10px;
     }
 
     .navbar-links.active {
-        display: flex;
-    }
-
-    .navbar-toggle {
         display: flex;
     }
 
