@@ -645,10 +645,12 @@ h3 {
     .navbar {
         flex-direction: column;
         align-items: flex-start;
+        padding: 10px;
     }
 
-    .navbar-toggle {
-        display: flex;
+    .navbar-logo img {
+        width: 50px;
+        height: 50px;
     }
 
     .navbar-links {
@@ -663,25 +665,38 @@ h3 {
         display: flex;
     }
 
+    .navbar-toggle {
+        display: flex;
+    }
+
     .navbar-links li {
         margin: 10px 0;
     }
 
-    .workshop-item {
-        flex-direction: column;
-        text-align: center;
+    #logo-image {
+        margin-top: 100px;
+        max-width: 100%;
     }
 
-    .workshop-item img,
-    .workshop-info {
+    .phrase-container {
+        margin-bottom: 30px;
+    }
+
+    .math-finance, .uci {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    .team-picture img {
         width: 100%;
+        height: auto;
+    }
+
+    .team-row {
+        flex-wrap: wrap;
     }
 
     .team-members {
         flex-direction: column;
-    }
-
-    .navbar-social {
-        margin-top: 10px;
     }
 }
