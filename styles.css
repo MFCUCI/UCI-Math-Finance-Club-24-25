@@ -1,7 +1,7 @@
 @font-face {
     font-family: 'Jua-Regular';
     /* src: url('fonts/Jua/Jua-Regular.ttf') format('truetype'); */
-    src: url('../fonts/Jua/Jua-Regular.ttf')format('truetype');
+    src: url('fonts/Jua/Jua-Regular.ttf')format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -34,6 +34,7 @@ body, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden;
 }
 
 /* Main Colors */
@@ -206,53 +207,67 @@ body, html {
     pointer-events: none;
 }
 
+/* Flex container for the logo */
+.logo-container {
+    position: relative;
+    height: 50vh;            /* Full viewport height for vertical centering */
+    display: flex;
+    justify-content: center;  /* Horizontally center the logo */
+    align-items: center;      /* Vertically center the logo */
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+/* Logo image styling */
 .logo-image {
     z-index: 1;
     pointer-events: none;
+    max-width: 100%;         /* Ensures the image is responsive */
+    height: auto;            /* Maintains the aspect ratio */
+    width: 600px;            /* Image width */
+    padding-bottom: 120px;   /* Add padding to the bottom of the image */
+
 }
 
-#logo-image {
-    width: 600px;
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin-top: 250px; /* Add some space between the logo and the top of the section */
-}
 
 /* Phrase container (Math Finance and UCI text) */
-.phrase-container {
-    z-index: 1;
-    color: white;
+.center-container {
+    position: relative;
+    width: 100%;
+    height: 50vh;           /* Full viewport height */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    flex-direction: column;   /* Stack items vertically */
+    justify-content: center;  /* Center vertically */
+    align-items: center;      /* Center horizontally */
     text-align: center;
-    margin-bottom: 50px; /* Ensure space between the text and the logo */
+    padding-top: 80px;
+
 }
 
+/* Shared styles for both texts */
 .math-finance, .uci {
-     position: absolute;
-    left: 50%; /* Center the text horizontally */
-    transform: translateX(-50%); /* Ensure the text is centered */
     color: white;
     white-space: nowrap;
     font-family: 'Londrina_Shadow', sans-serif;
     font-weight: bold;
-    letter-spacing: 10px;
+    letter-spacing: 0px;
     z-index: 2; /* Ensure the text is above the image */
-    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 0 0 10px rgba(255, 255, 255, 0.4), 0 0 15px rgba(255, 255, 255, 0.3);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
+                 0 0 10px rgba(255, 255, 255, 0.4), 
+                 0 0 15px rgba(255, 255, 255, 0.3);
+                 
+    font-size: 7.5vw;
+    line-height: 0.9; /* Adjust this value to control the spacing */
 }
 
 .math-finance {
-    top: 20px; /* Adjust the position relative to the container */
-    font-size: 90px;
+    padding-top: 10px;
+
+}
+.uci {
+    padding-bottom: 10px;
 }
 
-.uci {
-    top: 120px; /* Adjust the position relative to the container */
-    font-size: 80px;
-}
 
 .about {
     background-color: var(--light-gray);
@@ -426,6 +441,9 @@ body, html {
 
 .section.team {
     text-align: center;
+    padding-top: 70px;   /* Add padding to the bottom of the image */
+    padding-bottom: 70px;   /* Add padding to the bottom of the image */
+
 }
 
 .team-pictures {
