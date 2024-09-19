@@ -233,15 +233,16 @@ body, html {
 /* Phrase container (Math Finance and UCI text) */
 .center-container {
     position: relative;
-    width: 100%;
-    height: 50vh;           /* Full viewport height */
+    width: 90%;                /* Limit the width to 90% of the viewport width */
+    max-width: 1000px;         /* Optional: Set a maximum width to prevent excessive enlargement */
+    height: 50vh;             /* Full viewport height */
     display: flex;
     flex-direction: column;   /* Stack items vertically */
     justify-content: center;  /* Center vertically */
     align-items: center;      /* Center horizontally */
     text-align: center;
     padding-top: 80px;
-
+    margin: 0 auto;           /* Center the container horizontally */
 }
 
 /* Shared styles for both texts */
@@ -255,19 +256,32 @@ body, html {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
                  0 0 10px rgba(255, 255, 255, 0.4), 
                  0 0 15px rgba(255, 255, 255, 0.3);
-                 
     font-size: 7.5vw;
     line-height: 0.9; /* Adjust this value to control the spacing */
 }
 
 .math-finance {
     padding-top: 10px;
-
 }
+
 .uci {
     padding-bottom: 10px;
 }
 
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .math-finance, .uci {
+        font-size: 10vw; /* Adjust font size for smaller screens */
+        padding-top: 5px; /* Adjust padding for smaller screens */
+        padding-bottom: 5px; /* Adjust padding for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .math-finance, .uci {
+        font-size: 12vw; /* Further adjust font size for very small screens */
+    }
+}
 
 .about {
     background-color: var(--light-gray);
@@ -706,14 +720,6 @@ h3 {
         max-width: 100%;
     }
 
-    .phrase-container {
-        margin-bottom: 30px;
-    }
-
-    .math-finance, .uci {
-        font-size: 50px;
-        letter-spacing: 5px;
-    }
 
     .team-picture img {
         width: 100%;
