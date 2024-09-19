@@ -296,6 +296,23 @@ body, html {
     padding-right: 20px; /* Adjust the value as needed */
 }
 
+.learn-more-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--navy-blue);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-weight: bold;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.learn-more-btn:hover {
+    background-color: #00366b;
+}
+
+
 /* Upcoming Events Section */
 .events {
     position: relative;
@@ -395,7 +412,7 @@ body, html {
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
-
+    
 /* Responsive Design */
 @media (max-width: 1200px) {
     .past-events-grid {
