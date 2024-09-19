@@ -279,7 +279,7 @@ body, html {
 
 @media (max-width: 480px) {
     .math-finance, .uci {
-        font-size: 12vw; /* Further adjust font size for very small screens */
+        font-size: 10vw; /* Further adjust font size for very small screens */
     }
 }
 
