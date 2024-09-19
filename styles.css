@@ -283,15 +283,17 @@ body, html {
     }
 }
 
+
 .about {
     background-color: var(--light-gray);
     color: var(--dark-gray);
 }
 
-
 .about-description {
     font-weight: none;
     font-size: 18px;
+    padding-left: 20px; /* Adjust the value as needed */
+    padding-right: 20px; /* Adjust the value as needed */
 }
 
 /* Upcoming Events Section */
@@ -348,17 +350,19 @@ body, html {
 
 .past-events-grid {
     display: grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust columns to fit content */
     gap: 30px;
     justify-content: center;
 }
 
+/* Maintain 3:2 aspect ratio for images */
 .past-event-card {
     position: relative;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    aspect-ratio: 3 / 2; /* Maintain 3:2 aspect ratio */
 }
 
 .past-event-card:hover {
@@ -368,7 +372,7 @@ body, html {
 
 .past-event-image {
     width: 100%;
-    height: 220px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
@@ -390,8 +394,21 @@ body, html {
     padding: 5px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-
 }
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .past-events-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust column width */
+    }
+}
+
+@media (max-width: 768px) {
+    .past-events-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100%, 1fr)); /* Single column layout */
+    }
+}
+
 
 /* Event Description on Hover */
 .past-event-description {
