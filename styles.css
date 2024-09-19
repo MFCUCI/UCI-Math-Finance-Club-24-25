@@ -644,6 +644,75 @@ p {
     background-color: #003366;
 }
 
+/* Style for the speaker box */
+.speaker-box {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffefb4; /* Light gray background */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px;
+    max-width: 800px;
+    z-index: 2;
+}
+
+/* Style for the speaker image and title */
+.speaker-image {
+    display: flex;
+    flex-direction: column; /* Stacks the image and title vertically */
+    align-items: center; /* Centers the image and title horizontally */
+    justify-content: center; /* Centers the image and title vertically */
+    margin-right: 20px;
+    color: var(--dark-gray);
+    font-family: 'Jua-Regular', sans-serif  ;
+}
+
+.speaker-image img {
+    margin-left: 10px;
+    width: 150px;
+    height: auto;
+    border-radius: 50%; /* Circular image */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow around the image */
+}
+
+h4 {
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  
+
+/* Style for the speaker description */
+.speaker-description p {
+    font-size: 17px;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Optional: Add some padding around the text */
+.speaker-description {
+    padding: 0 10px;
+}
+
+.weekly-challenges {
+    padding-top: 75px;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.separator {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #ff00ff, #00ffff);
+    margin: 20px 0; /* Space around the separator */
+}
+
+.description {
+    font-size: 24px; /* Adjust font size */
+    margin: 20px 0; /* Space around the description */
+}
+
 /* Team Members */
 .team-pictures {
     display: flex;
@@ -667,8 +736,12 @@ p {
 }
 
 h3 {
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 5px;
+    font-family: 'Jua-Regular', sans-serif;
+    margin-top: 100px;
+    z-index: 3;
+
 }
 
 
