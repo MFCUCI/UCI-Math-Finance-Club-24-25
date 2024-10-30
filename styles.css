@@ -207,13 +207,15 @@ body, html {
     pointer-events: none;
 }
 
+
+
 /* Flex container for the logo */
 .logo-container {
     position: relative;
-    height: 50vh;            /* Full viewport height for vertical centering */
+    height: 50vh;             /* Full viewport height for vertical centering */
     display: flex;
-    justify-content: center;  /* Horizontally center the logo */
-    align-items: center;      /* Vertically center the logo */
+    justify-content: center;   /* Horizontally center the logo */
+    align-items: center;       /* Vertically center the logo */
     padding-top: 30px;
     padding-bottom: 50px;
 }
@@ -222,27 +224,26 @@ body, html {
 .logo-image {
     z-index: 1;
     pointer-events: none;
-    max-width: 100%;         /* Ensures the image is responsive */
-    height: auto;            /* Maintains the aspect ratio */
-    width: 600px;            /* Image width */
-    padding-bottom: 120px;   /* Add padding to the bottom of the image */
-
+    max-width: 100%;           /* Ensures the image is responsive */
+    width: 60vh;               /* Width based on viewport height for responsiveness */
+    height: auto;              /* Maintains the aspect ratio */
+    padding-bottom: 5vh;       /* Padding relative to viewport height */
+    min-width: 300px;          /* Minimum width to prevent the logo from becoming too small */
 }
-
 
 /* Phrase container (Math Finance and UCI text) */
 .center-container {
     position: relative;
     width: 90%;                /* Limit the width to 90% of the viewport width */
     max-width: 1000px;         /* Optional: Set a maximum width to prevent excessive enlargement */
-    height: 50vh;             /* Full viewport height */
+    height: 50vh;              /* Full viewport height */
     display: flex;
-    flex-direction: column;   /* Stack items vertically */
-    justify-content: center;  /* Center vertically */
-    align-items: center;      /* Center horizontally */
+    flex-direction: column;    /* Stack items vertically */
+    justify-content: center;   /* Center vertically */
+    align-items: center;       /* Center horizontally */
     text-align: center;
-    padding-top: 80px;
-    margin: 0 auto;           /* Center the container horizontally */
+    padding-top: 8vh;
+    margin: 0 auto;            /* Center the container horizontally */
 }
 
 /* Shared styles for both texts */
@@ -256,8 +257,21 @@ body, html {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
                  0 0 10px rgba(255, 255, 255, 0.4), 
                  0 0 15px rgba(255, 255, 255, 0.3);
-    font-size: 7.5vw;
-    line-height: 0.9; /* Adjust this value to control the spacing */
+    font-size: 10vh;            /* Font size based on viewport height for scaling */
+    line-height: 0.9;          /* Adjust this value to control the spacing */
+}
+
+/* Media query to prevent text from shrinking below a certain size */
+@media (max-height: 500px) {
+    .math-finance, .uci {
+        font-size: 60px;  /* Minimum font size for smaller screens */
+    }
+}
+
+@media (max-height: 400px) {
+    .logo-image {
+        width: 200px;   /* Minimum width for the logo image */
+    }
 }
 
 .math-finance {
