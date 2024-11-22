@@ -392,6 +392,7 @@ body, html {
     padding: 20px;
     border-radius: 8px; /* Rounded corners for each winner block */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow effect */
+    font-family: 'Segoe UI', sans-serif;
 }
 
 /* Styling for images */
@@ -405,16 +406,22 @@ body, html {
 
 /* Styling for text */
 h4 {
-    font-size: 1.2em;
+    font-size: 1.4em;
     color: #333; /* Dark text color */
     margin-bottom: 10px; /* Space between title and image */
+    font-weight: bold;
+   
 }
 
 #events p {
     font-size: 1em;
     color: black; /* Change this to whatever color you want */
+    font-weight: bold;
 }
 
+#events .name {
+    font-size: 1.2em;
+}
 
 
 
