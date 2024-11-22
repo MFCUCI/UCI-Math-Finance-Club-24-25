@@ -410,10 +410,12 @@ h4 {
     margin-bottom: 10px; /* Space between title and image */
 }
 
-p {
+#events p {
     font-size: 1em;
-    color: #000000; /* Lighter color for the name */
+    color: black; /* Change this to whatever color you want */
 }
+
+
 
 
 
@@ -516,6 +518,9 @@ p {
     opacity: 1;
 }
 
+#past-events p {
+    color: white; /* Change this to a different color */
+}
 
 .team {
     position: relative;
