@@ -209,47 +209,27 @@ body, html {
 
 
 
-/* Flex container for the logo */
-.logo-container {
-    position: relative;
-    height: 50vh;             /* Full viewport height for vertical centering */
-    display: flex;
-    justify-content: center;   /* Horizontally center the logo */
-    align-items: center;       /* Vertically center the logo */
-    padding-top: 30px;
-    padding-bottom: 50px;
-}
 
-/* Logo image styling */
-.logo-image {
-    z-index: 1;
-    pointer-events: none;
-    max-width: 100%;           /* Ensures the image is responsive */
-    width: 60vh;               /* Width based on viewport height for responsiveness */
-    height: auto;              /* Maintains the aspect ratio */
-    padding-bottom: 5vh;       /* Padding relative to viewport height */
-    min-width: 300px;          /* Minimum width to prevent the logo from becoming too small */
-}
 
 /* Phrase container (Math Finance and UCI text) */
 .center-container {
     position: relative;
-    width: 90%;                /* Limit the width to 90% of the viewport width */
-    max-width: 1000px;         /* Optional: Set a maximum width to prevent excessive enlargement */
-    height: 50vh;              /* Full viewport height */
+    width: 80%;                /* Adjust the container width as desired */
+    max-width: 1000px;         /* Set a maximum width if necessary */
+    height: 30vh;              /* Adjust the container height as needed */
     display: flex;
     flex-direction: column;    /* Stack items vertically */
     justify-content: center;   /* Center vertically */
     align-items: center;       /* Center horizontally */
     text-align: center;
-    padding-top: 8vh;
+    padding-top: 8vh;          /* Adjust for desired vertical padding */
     margin: 0 auto;            /* Center the container horizontally */
 }
 
 /* Shared styles for both texts */
 .math-finance, .uci {
     color: white;
-    white-space: nowrap;
+    white-space: nowrap; /* Ensure the text stays in one line */
     font-family: 'Londrina_Shadow', sans-serif;
     font-weight: bold;
     letter-spacing: 0px;
@@ -257,9 +237,16 @@ body, html {
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.6), 
                  0 0 10px rgba(255, 255, 255, 0.4), 
                  0 0 15px rgba(255, 255, 255, 0.3);
-    font-size: 10vh;            /* Font size based on viewport height for scaling */
-    line-height: 0.9;          /* Adjust this value to control the spacing */
+    
+    /* Keep font size constant */
+    font-size: 15vh;            /* Font size based on viewport height */
+    line-height: 0.9;           /* Adjust line height for spacing */
+    text-align: center;
+    position: relative;
+    max-width: 100%;            /* Ensure text doesn't overflow the container */
+    white-space: nowrap;        /* Ensure the text stays on one line */
 }
+
 
 /* Media query to prevent text from shrinking below a certain size */
 @media (max-height: 500px) {
@@ -295,6 +282,28 @@ body, html {
     .math-finance, .uci {
         font-size: 10vw; /* Further adjust font size for very small screens */
     }
+}
+
+
+/* Flex container for the logo */
+.logo-container {
+    position: relative;
+    height: 50vh;             /* Full viewport height for vertical centering */
+    display: flex;
+    justify-content: center;   /* Horizontally center the logo */
+    align-items: center;       /* Vertically center the logo */
+    margin-top: 40px;          /* Push the logo container lower */
+}
+
+/* Logo image styling */
+.logo-image {
+    z-index: 1;
+    pointer-events: none;
+    max-width: 100%;           /* Ensures the image is responsive */
+    width: 60vh;               /* Width based on viewport height for responsiveness */
+    height: auto;              /* Maintains the aspect ratio */
+    padding-bottom: 5vh;       /* Padding relative to viewport height */
+    min-width: 300px;          /* Minimum width to prevent the logo from becoming too small */
 }
 
 
