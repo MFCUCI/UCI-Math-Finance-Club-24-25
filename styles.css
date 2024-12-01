@@ -433,6 +433,32 @@ h4 {
 }
 
 
+/* Membership Section Styles */
+.section.membership {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(120deg, #ffecd2, #fcb69f); /* Gradient background */
+}
+
+.membership-row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Space between images */
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
+}
+
+.membership-row img {
+    width: 275px; /* Adjust as needed */
+    height: auto;
+    border-radius: 8px; /* Optional: Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+    transition: transform 0.2s; /* Optional: Hover effect */
+}
+
+
+.membership-row img:hover {
+    transform: scale(1.05); /* Optional: Slight zoom on hover */
+}
 
 
 /* Past Events Section */
