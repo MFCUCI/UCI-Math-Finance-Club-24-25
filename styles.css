@@ -747,7 +747,9 @@ h3 {
 
 }
 
-
+h4{
+    line-height: 2;
+}
 
 /* Contact Links */
 .contact {
