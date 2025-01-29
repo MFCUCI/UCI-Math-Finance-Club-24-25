@@ -1,28 +1,30 @@
-@font-face {
-    font-family: 'Jua-Regular';
-    /* src: url('fonts/Jua/Jua-Regular.ttf') format('truetype'); */
-    src: url('MFCUCI.github.io/assets/fonts/Jua/Jua-Regular.ttf')format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 
 @font-face {
     font-family: 'Londrina_Shadow';
-    src: url('MFCUCI.github.io/assets/fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
+    font-family: 'Jua-Regular';
+    src: url('./assets/fonts/Jua/Jua-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+@font-face {
     font-family: 'Playwrite_BE_VLG';
-    src: url('MFCUCI.github.io/assets/fonts/Playwrite_BE_VLG/PlaywriteBEVLG-VariableFont_wght.ttf') format('truetype');
+    src: url('./assets/fonts/Playwrite_BE_VLG/PlaywriteBEVLG-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Rubik_Doodle_Triangles';
-    src: url('MFCUCI.github.io/assets/fonts/Rubik_Doodle_Triangles/RubikDoodleTriangles-Regular?v=1.ttf') format('truetype');
+    src: url('./assets/fonts/Rubik_Doodle_Triangles/RubikDoodleTriangles-Regular?v=1.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
