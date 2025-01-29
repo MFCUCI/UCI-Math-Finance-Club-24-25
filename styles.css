@@ -1,28 +1,28 @@
 @font-face {
     font-family: 'Jua-Regular';
     /* src: url('fonts/Jua/Jua-Regular.ttf') format('truetype'); */
-    src: url('fonts/Jua/Jua-Regular.ttf')format('truetype');
+    src: url('MFCUCI.github.io/assets/fonts/Jua/Jua-Regular.ttf')format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Londrina_Shadow';
-    src: url('fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf') format('truetype');
+    src: url('MFCUCI.github.io/assets/fonts/Londrina_Shadow/LondrinaShadow-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Playwrite_BE_VLG';
-    src: url('fonts/Playwrite_BE_VLG/PlaywriteBEVLG-VariableFont_wght.ttf') format('truetype');
+    src: url('MFCUCI.github.io/assets/fonts/Playwrite_BE_VLG/PlaywriteBEVLG-VariableFont_wght.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Rubik_Doodle_Triangles';
-    src: url('fonts/Rubik_Doodle_Triangles/RubikDoodleTriangles-Regular?v=1.ttf') format('truetype');
+    src: url('MFCUCI.github.io/assets/fonts/Rubik_Doodle_Triangles/RubikDoodleTriangles-Regular?v=1.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -187,7 +187,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('Binary_Background.png') repeat;
+    background: url('assets/images/Binary_Background.png') repeat;
     background-size: cover;
     opacity: 0.5;
     z-index: 0;
@@ -353,7 +353,7 @@ body, html {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('Binary_Background.png') repeat;
+    background: url('assets/images/Binary_Background.png') repeat;
     background-size: cover; /* Ensure the image covers the entire area */
     opacity: 0.5; /* Adjust opacity to make the image more visible */
     z-index: 0;
@@ -604,7 +604,7 @@ h4 {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('Binary_Background.png') repeat;
+    background: url('assets/images/Binary_Background.png') repeat;
     background-size: cover; /* Ensure the image covers the entire area */
     opacity: 0.5; /* Adjust opacity to make the image more visible */
     z-index: 0;
