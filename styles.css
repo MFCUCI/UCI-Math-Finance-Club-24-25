@@ -389,6 +389,7 @@ body, html {
     justify-content: center; /* Center the items horizontally */
     gap: 40px; /* Adds space between the two images */
     margin-top: 30px; /* Adds space above the winners' images */
+    margin-bottom: 70px;
     background-color: #f7f7f700; /* Light background color */
     padding: 40px; /* Padding around the entire container */
     border-radius: 12px; /* Rounded corners for the container */
