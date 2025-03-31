@@ -7,12 +7,18 @@
 }
 
 @font-face {
-    font-family: 'Jua-Regular';
-    src: url('./assets/fonts/Jua/Jua-Regular.ttf') format('truetype');
+    font-family: 'Sarala Regular';
+    src: url('./assets/fonts/Sarala/Sarala-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Sarala Bold';
+    src: url('./assets/fonts/Sarala/Sarala-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 
 @font-face {
@@ -54,7 +60,7 @@ body, html {
     align-items: center;
     padding: 7px 20px;
     color: var(--white);
-    font-family: 'Jua-Regular', sans-serif;
+    font-family: 'Sarala Bold', sans-serif;
     letter-spacing: 3p  x;
     background-color: transparent; /* Initially transparent */
     position: fixed;
@@ -312,13 +318,14 @@ body, html {
 .about {
     background-color: var(--light-gray);
     color: var(--dark-gray);
+    padding-bottom: 5%;
 }
 
 .about-description {
     font-weight: none;
-    font-size: 18px;
-    padding-left: 20px; /* Adjust the value as needed */
-    padding-right: 20px; /* Adjust the value as needed */
+    font-size: 20px;
+    padding-left: 0px; /* Adjust the value as needed */
+    padding-right: 0px; /* Adjust the value as needed */
 }
 
 .learn-more-btn {
@@ -379,7 +386,7 @@ body, html {
 
 /* Adds some padding above the section */
 .section.events {
-    padding-top: 50px;
+    padding: 50px 20px;
     text-align: center;
 }
 
@@ -418,12 +425,13 @@ body, html {
 
 .upcoming-events-container {
     z-index: 2;
-    padding-top: 60px; /* Adds more space above the entire section */
+    padding-top: 0px; /* Adds more space above the entire section */
+
 }
 
 /* Speaker Event Image Styling */
 .next.event {
-    padding-top: 30px; /* Adds more space above the event title and image */
+    padding-top: 0px; /* Adds more space above the event title and image */
 }
 
 .next.event img {
@@ -495,10 +503,10 @@ h4 {
 
 .past-events h2 {
     text-align: center;
-    font-family: 'Jua-Regular', sans-serif;
-    font-size: 36px;
+    font-family: 'Sarala Bold', sans-serif;
+    font-size: 5vh;
     color: var(--dark-gray);
-    margin-bottom: 40px;
+    margin-bottom: 5%;
 }
 
 .past-events-grid {
@@ -695,8 +703,10 @@ h4 {
 
 
 h2 {
-    font-family:'Jua-Regular', sans-serif;
-    font-size: 36px;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    font-family:'Sarala Bold', sans-serif;
+    font-size: 5vh;
     letter-spacing: 3px;
     margin-bottom: 20px;
     z-index: 2;
@@ -743,11 +753,10 @@ p {
 
 h3 {
     font-size: 30px;
-    margin-bottom: 5px;
-    font-family: 'Jua-Regular', sans-serif;
-    margin-top: 100px;
+    margin-bottom: 2%;
+    font-family: 'Sarala Bold', sans-serif;
+    margin-top: 5%;
     z-index: 3;
-
 }
 
 h4{
@@ -848,4 +857,20 @@ h4{
     .team-members {
         flex-direction: column;
     }
+}
+
+
+/* Frequent Questions Section */
+
+.question-and-answer {
+    padding: 50px 20px;
+    background-color: var(--light-gray);
+}
+
+.question-and-answer h2 {
+    text-align: center;
+    font-family: 'Sarala Bold', sans-serif;
+    font-size: 5vh;
+    color: var(--dark-gray);
+    margin-bottom: 40px;
 }
