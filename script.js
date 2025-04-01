@@ -48,3 +48,17 @@ document.querySelectorAll('.navbar-links a').forEach(anchor => {
         });
     });
 });
+
+
+// toggle function
+function toggleAnswer(element) {
+    const answer = element.nextElementSibling;
+    const toggleBtn = element.querySelector(".toggle-btn");
+    if (answer.style.display === "block") {
+        answer.style.display = "none";
+        toggleBtn.textContent = "+";
+    } else {
+        answer.style.display = "block";
+        toggleBtn.textContent = "-";
+    }
+}
